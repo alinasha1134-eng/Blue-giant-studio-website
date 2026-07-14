@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Exclude compliance pages from indexing but allow crawling
+Disallow: /privacy-policy.html
+Disallow: /terms-conditions.html
+Disallow: /404.html
+
+Sitemap: https://bluegiantstudio.com/sitemap.xml

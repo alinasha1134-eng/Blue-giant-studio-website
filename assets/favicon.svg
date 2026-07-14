@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Blue Giant Studio">
+  <circle cx="50" cy="52" r="46" fill="none" stroke="#1B4F72" stroke-width="3"/>
+  <path d="M50 18 C38 18 28 24 22 32 C28 30 38 28 50 28 C62 28 72 30 78 32 C72 24 62 18 50 18Z" fill="#343A40"/>
+  <path d="M50 18 C38 18 28 24 22 32 C28 30 38 28 50 28 C50 28 50 18 50 18Z" fill="none" stroke="#1B4F72" stroke-width="2.5"/>
+  <path d="M12 58 Q25 52 38 58 T62 58 T88 58" fill="none" stroke="#1B4F72" stroke-width="3" stroke-linecap="round"/>
+  <path d="M12 68 Q25 62 38 68 T62 68 T88 68" fill="none" stroke="#343A40" stroke-width="3" stroke-linecap="round"/>
+  <path d="M12 78 Q25 72 38 78 T62 78 T88 78" fill="none" stroke="#1B4F72" stroke-width="3" stroke-linecap="round"/>
+</svg>
