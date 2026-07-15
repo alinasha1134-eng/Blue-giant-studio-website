@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. PRELOADER REMOVAL ---
     const preloader = document.querySelector('.loader-overlay');
     if (preloader) {
-        window.addEventListener('load', () => {
+        window.addEventListener('load', () => {s
             setTimeout(() => {
                 preloader.classList.add('fade-out');
             }, 800); // Slight delay for visual satisfaction
