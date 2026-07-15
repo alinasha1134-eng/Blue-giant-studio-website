@@ -322,21 +322,21 @@ const data = {
 
 fetch("https://script.google.com/macros/s/AKfycbxRcisWYTMz84Xho-L8cP9ahp7Mf4-JwDxp_k9AUTgxL3o8dC24XPHUvZqdG310nbY0/exec", {
     method: "POST",
+    mode: "cors",
     headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "text/plain;charset=utf-8"
     },
     body: JSON.stringify(data)
 })
 .then(response => response.text())
 .then(result => {
-    console.log("Apps Script Response:", result);
+    console.log(result);
     showSuccessState();
 })
 .catch(error => {
-    console.error("Fetch Error:", error);
-    alert("Error: " + error.message);
-});
-            function showSuccessState() {
+    console.error(error);
+    alert(error.message);
+});            function showSuccessState() {
                 if (formCard && successCard) {
                     formCard.classList.add('d-none');
                     successCard.classList.remove('d-none');
