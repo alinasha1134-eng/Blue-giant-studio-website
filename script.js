@@ -320,7 +320,7 @@ const data = {
     message: leadForm.querySelector('[name="message"]').value
 };
 
-fetch("https://script.google.com/macros/s/AKfycbx4KzxI12YIykMhm52Z8EJULvsvBO8U6joyLxXw049LV_BkXh4Z27wjhkPKiau2x2Ad/exec", {
+fetch("https://script.google.com/macros/s/AKfycbxRcisWYTMz84Xho-L8cP9ahp7Mf4-JwDxp_k9AUTgxL3o8dC24XPHUvZqdG310nbY0/exec", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
