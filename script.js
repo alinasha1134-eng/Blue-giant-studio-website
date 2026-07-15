@@ -326,14 +326,16 @@ fetch("https://script.google.com/macros/s/AKfycbxRcisWYTMz84Xho-L8cP9ahp7Mf4-JwD
         "Content-Type": "application/json"
     },
     body: JSON.stringify(data)
-}) 
-    .then(() => {
-                showSuccessState();
-            })
-            .catch(() => {
-                showSuccessState(); // Fallback to showcase checkout success modal state
-            });
-
+})
+.then(response => response.text())
+.then(result => {
+    console.log("Apps Script Response:", result);
+    showSuccessState();
+})
+.catch(error => {
+    console.error("Fetch Error:", error);
+    alert("Error: " + error.message);
+});
             function showSuccessState() {
                 if (formCard && successCard) {
                     formCard.classList.add('d-none');
