@@ -309,17 +309,25 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
 
-            const formData = new FormData(leadForm);
-            const formAction = leadForm.getAttribute('action') || 'https://formspree.io/f/alinasha1134@gmail.com';
+const data = {
+    name: leadForm.querySelector('[name="name"]').value,
+    company: leadForm.querySelector('[name="company"]').value,
+    business_name: leadForm.querySelector('[name="business_name"]').value,
+    business_niche: leadForm.querySelector('[name="business_niche"]').value,
+    whatsapp: leadForm.querySelector('[name="whatsapp"]').value,
+    package: leadForm.querySelector('[name="package"]').value,
+    email: leadForm.querySelector('[name="email"]').value,
+    message: leadForm.querySelector('[name="message"]').value
+};
 
-            fetch(formAction, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(() => {
+fetch("https://script.google.com/macros/s/AKfycbwkjVSANS9l3-eGoeJyxP0BlrrYh4P2dsZKdh0E61LMiXCH6x_VuiybfnEEWgS8IDg3/exec", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+}) 
+    .then(() => {
                 showSuccessState();
             })
             .catch(() => {
